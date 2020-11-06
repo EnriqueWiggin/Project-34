@@ -12,9 +12,9 @@ function preload()
 
 function setup() {
   createCanvas(500, 500);
-  dog = createSprite(10,10);
+  dog = createSprite(250,250);
   dog.addImage(dog2);
-  
+  dog.scale=0.15;
   database=firebase.database();
   foodStock=database.ref('Food');
   foodStock.on("value",readStock);
